@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <%- include('partials/head')%>
+</head>
+<body>
+    
+    <%- include('partials/navigation')%>
+    <header>
+        <div class="presentacion">
+            <h1>Proyecto Final</h1>
+            <h3>Busqueda de amistad aplicando Lógica Difusa</h3>
+            <p>Integrantes: </p>
+            <p>Medina Carranco Diana Mariel</p>
+            <p>Diaz Lopez Saul Fernando</p>
+        </div>
+    </header>
+
+    <div class="form-intro">
+        <h5>A continuación, rellena el siguiente formulario para entablar la amistad ideal para ti.</h5>
+    </div>
+
+    <!-- "Haz un Amigo" -->
+    <div class="haz-un-amigo">
+        <h2>Haz un Amigo</h2>
+        <div class="mb-3">1. ¿Cuál es tu nombre?</div>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+
+        <div class="pregunta" style="margin-bottom: 0;">2. ¿Cuál es tu edad?</div>
+        <div class="respuesta">
+            <input type="number" class="numero-input" min="1">
+        </div>
+
+        <!-- Correcciones y preguntas adicionales -->
+        <div class="pregunta">3. ¿Edad de diferencia preferible para entablar una amistad?</div>
+        <div class="opciones-seleccionables">
+            <label><input type="radio" name="edad-diferencia" value="1"> Menos de 4 años</label>
+            <label><input type="radio" name="edad-diferencia" value="2"> Entre 4 y 8 años</label>
+            <label><input type="radio" name="edad-diferencia" value="3"> Me es indiferente</label>
+        </div>
+
+        <div class="pregunta">4. ¿Prefieres algún sexo en específico?</div>
+        <div class="opciones-seleccionables">
+            <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+            <label><input type="radio" name="sexo" value="femenino"> Femenino</label>
+            <label><input type="radio" name="sexo" value="ambos"> Ambos</label>
+        </div>
+
+        <div class="pregunta">5. ¿Nivel educativo que prefieres?</div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="educacion" value="básica"> Básica</label>
+            <label><input type="checkbox" name="educacion" value="media_superior"> Media superior</label>
+            <label><input type="checkbox" name="educacion" value="superior"> Superior</label>
+        </div>
+
+        <div class="pregunta">6. ¿Tienes alguna preferencia en lo que refiere a la ocupación?</div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="6" value="estudiante"> Estudiante</label>
+            <label><input type="checkbox" name="6" value="profesional"> Profesional</label>
+            <label><input type="checkbox" name="6" value="otro"> Otro</label>
+        </div>
+
+        <div class="pregunta">7. ¿Alguna personalidad en específico?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="7" value="Introvertida"> Introvertida</label>
+            <label><input type="radio" name="7" value="Extrovertida"> Extrovertida</label>
+            <label><input type="radio" name="7" value="Ambas"> Ambas</label>
+        </div>
+
+        <div class="pregunta">8. ¿Qué actitud buscas?</div>
+        <div class="respuesta">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona</option>
+                <option value="2">Calmado</option>
+                <option value="3">Eufórico</option>
+                <option value="4">Nervioso</option>
+                <option value="5">Vigoroso</option>
+                <option value="6">Despreocupado</option>
+                <option value="7">Cauto</option>
+                <option value="8">Entusiasta</option>
+                <option value="9">Desafiante</option>
+                <option value="10">Otra (especifica):</option>
+            </select>
+            <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">9. ¿Qué enfoque personal esperas de tu posible amistad?</div>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="enfoque" value="familia"> Familia</label>
+                <label><input type="checkbox" name="enfoque" value="Amigos"> Amigos</label>
+                <label><input type="checkbox" name="enfoque" value="Trabajo"> Trabajo</label>
+                <label><input type="checkbox" name="enfoque" value="Soledad"> Soledad</label>
+            </div>
+            
+        <div class="pregunta">10. ¿Prefieres alguna condición deportiva en específico al entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="condicion" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="condicion" value="Leve"> Leve</label>
+            <label><input type="radio" name="condicion" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="condicion" value="Alta"> Alta</label>
+            <label><input type="radio" name="condicion" value="Profesional"> Profesional</label>
+        </div>
+
+
+        <div class="pregunta">11. ¿Algún deporte en específico?</div>
+        <div class="respuesta">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona</option>
+                <option value="1">Nulo en mi respuesta anterior.</option>
+                <option value="2">Individuales (atletismo, natación, ciclismo, etc).</option>
+                <option value="3">Equipo (fútbol, baloncesto, voleibol, americano, etc).</option>
+                <option value="4">Combate (boxeo, judo, karate, lucha libre, etc).</option>
+                <option value="5">Acuáticos (natación, buceo, waterpolo, remo, etc).</option>
+                <option value="6">Invierno (esquí, snowboard, patinaje sobre hielo, etc).</option>
+                <option value="7">Pelota (béisbol, softbol, cricket, etc).</option>
+                <option value="8">Raqueta (tenis, bádminton, squash, ping pong, etc).</option>
+                <option value="9">Aventura (escalada, paracaidismo, carreras, etc).</option>
+                <option value="10">Precisión (tiro con arco, tiro al blanco, etc).</option>
+                <option value="11">Deportes de motor (automovilismo, motocross, carreras de motos, etc)..</option>
+                <option value="12">Otra (especifica):</option>
+            </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">12. ¿Te es importante el gusto por viajar para entablar un amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="viajes" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="viajes" value="Leve"> Leve</label>
+            <label><input type="radio" name="viajes" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="viajes" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">13. ¿Qué estilo de viaje prefieres en tu amistad?</div>
+        <div class="respuesta">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona</option>
+                <option value="1">Nulo en mi respuesta anterior.</option>
+                <option value="2">Turismo Cultural.</option>
+                <option value="3">Aventura y naturaleza.</option>
+                <option value="4">Turismo Religioso.</option>
+                <option value="5">Turismo Gastronómico.</option>
+                <option value="6">Playa y sol.</option>
+                <option value="7">Turismo Urbano.</option>
+                <option value="8">Turismo de Salud y Bienestar.</option>
+                <option value="9">Ecoturismo.</option>
+                <option value="10">Viajes de estudio.</option>
+                <option value="11">Otra (especifica):</option>
+            </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+
+
+        <div class="pregunta">14. ¿Gusto por leer mangas es relevante al entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="mangas" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="mangas" value="Leve"> Leve</label>
+            <label><input type="radio" name="mangas" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="mangas" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">15. ¿Gusto por videojuegos es relevante al entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="videouegos" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="videouegos" value="Leve"> Leve</label>
+            <label><input type="radio" name="videouegos" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="videouegos" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">16. ¿Qué género de videojuegos?</div>
+        <div class="respuesta">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona</option>
+                <option value="1">Nulo en mi respuesta anterior.</option>
+                <option value="2">Acción.</option>
+                <option value="3">Aventura.</option>
+                <option value="4">Arcade.</option>
+                <option value="5">Deportivo.</option>
+                <option value="6">Estrategia.</option>
+                <option value="7">Simulación.</option>
+                <option value="8">Musicales.</option>
+                <option value="9">Otra (especifica):</option>
+            </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">17. ¿Gusto por la música es relevante al entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="musica" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="musica" value="Leve"> Leve</label>
+            <label><input type="radio" name="musica" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="musica" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">18. ¿Qué género de música?</div>
+        <div class="respuesta">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Selecciona</option>
+            <option value="1">Nulo en mi respuesta anterior.</option>
+            <option value="2">Clásica.</option>
+            <option value="3">Rock.</option>
+            <option value="4">Jazz.</option>
+            <option value="5">Pop.</option>
+            <option value="6">Techno.</option>
+            <option value="7">Reggae.</option>
+            <option value="8">Salsa.</option>
+            <option value="9">Ranchera.</option>
+            <option value="10">Hip Hop.</option>
+            <option value="11">Metal.</option>
+            <option value="12">Melódica.</option>
+            <option value="11">Reggaetón</option>
+            <option value="12">Rap</option>
+            <option value="9">Otra (especifica):</option>
+        </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+
+
+        <div class="pregunta">19. ¿Es relevante la religión en una posible amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="religion" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="religion" value="Leve"> Leve</label>
+            <label><input type="radio" name="religion" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="religion" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">20. ¿Alguna religión en específico?</div>
+        <div class="respuesta">
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">21. ¿El apego a la familia que tiene la otra persona es relevante al entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="familia" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="familia" value="Leve"> Leve</label>
+            <label><input type="radio" name="familia" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="familia" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">22. ¿El gusto por el cine es necesario?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name=" cine" value="Nulo"> Nulo</label>
+            <label><input type="radio" name=" cine" value="Leve"> Leve</label>
+            <label><input type="radio" name=" cine" value="Moderada"> Moderada</label>
+            <label><input type="radio" name=" cine" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">23. ¿Algún género de cine en específico?</div>
+        <div class="respuesta">
+        <select class="form-select" aria-label="Default select example">
+        <option selected>Selecciona</option>
+        <option value="1">Nulo en mi respuesta anterior.</option>
+        <option value="2">Acción.</option>
+        <option value="3">Aventura.</option>
+        <option value="4">Comedia.</option>
+        <option value="5">Drama.</option>
+        <option value="6">Ciencia Ficción.</option>
+        <option value="7">Fantasía.</option>
+        <option value="8">Terror.</option>
+        <option value="9">Romance.</option>
+        <option value="10">Suspenso</option>
+        <option value="11">Otra (especifica):</option>
+        </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">24. ¿Gusto por la lectura es relevante?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="lectura" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="lectura" value="Leve"> Leve</label>
+            <label><input type="radio" name="lectura" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="lectura" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">25. ¿Algún género en específico?</div>
+        <div class="respuesta">
+        <select class="form-select" aria-label="Default select example">
+        <option selected>Selecciona</option>
+        <option value="1">Nulo en mi respuesta anterior.</option>
+        <option value="2">Ficción.</option>
+        <option value="3">No ficción.</option>
+        <option value="4">Poesía.</option>
+        <option value="5">Ciencia Ficción.</option>
+        <option value="6">Misterio/Thriller.</option>
+        <option value="7">Fantasía.</option>
+        <option value="8">Romance.</option>
+        <option value="9">Histórica.</option>
+        <option value="10">Horror.</option>
+        <option value="11">Otra (especifica):</option>
+        </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">26. ¿Hábitos de sueño preferibles en la otra persona para entablar una amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="lectura" value="Regulares"> Regulares</label>
+            <label><input type="radio" name="lectura" value="Irregulares"> Irregulares</label>
+            <label><input type="radio" name="lectura" value="noche">Vivir de noche</label>
+        </div>
+
+        <div class="pregunta">27. ¿Importancia que le da la otra persona a la amistad es relevante?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="amistad" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="amistad" value="Leve"> Leve</label>
+            <label><input type="radio" name="amistad" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="amistad" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">28. ¿El gusto que tiene la otra persona por las mascotas es relevante en una posible amistad?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="mascotas" value="Nulo"> Nulo</label>
+            <label><input type="radio" name="mascotas" value="Moderada"> Moderada</label>
+            <label><input type="radio" name="mascotas" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">29. ¿Algún animal en específico?</div>
+        <div class="respuesta">
+        <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">Nulo en mi respuesta anterior.</option>
+        <option value="2">Perros.</option>
+        <option value="3">Gatos.</option>
+        <option value="4">Aves.</option>
+        <option value="5">Peces.</option>
+        <option value="6">Roedores.</option>
+        <option value="11">Otra (especifica):</option>
+        </select>
+        <input type="text" name="8-otra" placeholder="Especifica aquí">
+        </div>
+
+        <div class="pregunta">30. ¿Importancia que le debe dar la otra persona al cuidado de la salud es relevante?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="mascotas" value="baja"> Baja</label>
+            <label><input type="radio" name="mascotas" value="media"> Media</label>
+            <label><input type="radio" name="mascotas" value="Alta"> Alta</label>
+        </div>
+
+        <div class="pregunta">31. ¿Importancia en la apariencia personal?</div>
+        <div class="checkbox-group">
+            <label><input type="radio" name="mascotas" value="baja"> Baja</label>
+            <label><input type="radio" name="mascotas" value="media"> Media</label>
+            <label><input type="radio" name="mascotas" value="Alta"> Alta</label>
+        </div>
+        </div>
+
+
+        <div class="centrar-btn-enviar">
+            <a href="/busqueda" class="btn btn-enviar">Enviar respuestas</a>
+        </div>
+    <%- include('partials/footer')%>
+</body>
+</html>

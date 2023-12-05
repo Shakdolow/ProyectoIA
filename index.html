@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <header>
+        <div class="presentacion">
+            <h1>Proyecto Final</h1>
+            <h3>Busqueda de amistad aplicando Lógica Difusa</h3>
+            <p>Integrantes: </p>
+            <p>Medina Carranco Diana Mariel</p>
+            <p>Diaz Lopez Saul Fernando</p>
+        </div>
+    </header>
+
+    <div class="form-intro">
+        <h5>A continuación, rellena el siguiente formulario para entablar la amistad ideal para ti.</h5>
+    </div>
+
+    
+    <div class="haz-un-amigo">
+        <h2>Encuentra un nuevo Amigo</h2>
+        <div class="mb-3">1. ¿Cuál es tu nombre?</div>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+
+        <div class="pregunta">2. ¿Cual Seria un Rango de Edad preferible para entablar una amistad?</div>
+        <select class ="form-select" name="Edad" id="Edad">
+        <label for="Edad"></label>
+        <div class="opciones-seleccionables">
+            <!-- //15-17 - 18-20 - 21-23 - 24-26 - 27-30  -->
+            <option value="blank"></option>
+            <option value="15-17">15-17</option>
+            <option value="18-20">18-20</option>
+            <option value="21-23">21-23</option>
+            <option value="24-26">24-26</option>
+            <option value="27-30">27-30</option>
+        </div>
+    </select>
+
+        <div class="pregunta">3. ¿Prefieres algún sexo en específico?</div>
+        <select class ="form-select" name="Sexo" id="Sexo">
+            <label for="Sexo"></label>
+            <div class="opciones-seleccionables">
+                <!-- Masculino - Femenino  -->
+                <option value="blank"></option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </div>
+        </select>
+
+        <div class="pregunta">4. ¿Que nivel educativo prefieres?</div>
+        <select class ="form-select" name="Educacion" id="Educacion">
+            <label for="Educacion"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Basica">Basica</option>
+                <option value="Media Superior">Media Superior</option>
+                <option value="Superior">Superior</option>
+            </div>
+        </select>
+
+        <div class="pregunta">5. ¿Que tipo de ocupación prefieres que tenga?</div>
+        <select class ="form-select" name="Ocupacion" id="Ocupacion">
+            <label for="Ocupacion"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Trabajador">Trabajador</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Desempleado">Desempleado</option>
+            </div>
+        </select>
+
+        <div class="pregunta">6. ¿Que tipo de personalidad?</div>
+        <select class ="form-select" name="Personalidad" id="Personalidad">
+            <label for="Personalidad"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Extrovertida">Extrovertida</option>
+                <option value="Introvertida">Introvertida</option>
+            </div>
+        </select>
+
+        <div class="pregunta">7. ¿Que tipo de paz interior deseas que tenga?</div>
+        <select class ="form-select" name="Paz interior" id="Paz interior">
+            <label for="Paz interior"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Calmado">Calmado</option>
+                <option value="Reactivo">Reactivo</option>
+                <option value="Nervioso">Nervioso</option>
+            </div>
+        </select>
+
+        <div class="pregunta">9. ¿Cual deseas que sea su enfoque personal?</div>
+        <select class ="form-select" name="Enfoque" id="Enfoque">
+            <label for="Enfoque"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Familia">Familia</option>
+                <option value="Amigos">Amigos</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Soledad">Soledad</option>
+            </div>
+        </select>
+            
+        <div class="pregunta">10. ¿Y que tal acerca de su actividad deportiva?</div>
+        <select class ="form-select" name="Deporte" id="Deporte">
+            <label for="Deporte"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nula">Nula</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+                <option value="Profesional">Profesional</option>
+            </div>
+        </select>
+
+
+        <div class="pregunta">11. ¿Que tal su gusto por viajar?</div>
+        <select class ="form-select" name="Viajar" id="Viajar">
+            <label for="Viajar"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">12. ¿Y que tal de su gusto por leer mangas?</div>
+        <select class ="form-select" name="Mangas" id="Mangas">
+            <label for="Mangas"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">13. ¿O de su gusto por los videojuegos?</div>
+        <select class ="form-select" name="Videojuegos" id="Videojuegos">
+            <label for="Videojuegos"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+
+
+        <div class="pregunta">14. ¿Que tal deberia estar el gusto por la musica para relajarse en tu amigo?</div>
+        <select class ="form-select" name="Relajarse" id="Relajarse">
+            <label for="Relajarse"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">15. ¿Y como preferirias su gusto por la musica para animarse?</div>
+        <select class ="form-select" name="Animarse" id="Animarse">
+            <label for="Animarse"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">16. ¿Como prefieres que sea su apego a la religión?</div>
+        <select class ="form-select" name="Religion" id="Religion">
+            <label for="Religion"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">16. ¿Como prefieres que sea su apego a la familia?</div>
+        <select class ="form-select" name="familia" id="familia">
+            <label for="familia"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">18. ¿Y como quieres que sea su gusto por el cine?</div>
+        <select class ="form-select" name="cine" id="cine">
+            <label for="cine"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+
+
+        <div class="pregunta">19. ¿Y su gusto por leer?</div>
+        <select class ="form-select" name="leer" id="leer">
+            <label for="leer"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">20. ¿Que tal de sus habitos de sueño?</div>
+        <select class ="form-select" name="sueño" id="sueño">
+            <label for="sueño"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Regulares">Regulares</option>
+                <option value="Invertidos">Invertidos(Vivir de noche)</option>
+                <option value="Irregulares">Irregulares</option>
+            </div>
+        </select>
+
+        <div class="pregunta">21. ¿Que tanta importancia de la amistad deberia tener?</div>
+        <select class ="form-select" name="amistad" id="amistad">
+            <label for="amistad"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Nulo">Nulo</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">22. ¿Cual deberia ser su gusto por las mascotas?</div>
+        <select class ="form-select" name="mascotas" id="mascotas">
+            <label for="mascotas"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Perros">Perros</option>
+                <option value="Gatos">Gatos</option>
+                <option value="Aves">Aves</option>
+                <option value="Peces">Peces</option>
+                <option value="Roedores">Roedores</option>
+                <option value="Serpientes">Serpientes</option>
+            </div>
+        </select>
+
+        <div class="pregunta">23. ¿Que importancia en el cuidado de su salud debe tener?</div>
+        <select class ="form-select" name="Salud" id="Salud">
+            <label for="Salud"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="pregunta">24. ¿Y su importancia en la apariencia personal?</div>
+        <select class ="form-select" name="Apariencia" id="Apariencia">
+            <label for="Apariencia"></label>
+            <div class="opciones-seleccionables">
+                <!-- //basica/media superior/superior  --> 
+                <option value="blank"></option>
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </div>
+        </select>
+
+        <div class="centrar-btn-enviar">
+            <button id="btnBuscarAmigos">¡Click para encontrar a tu amigo!</button>
+        </div>
+        
+        <script src="main.js"></script>
+        <script>
+            
+            document.getElementById('btnBuscarAmigos').addEventListener('click', function() {
+                buscarAmigos();
+            });
+        </script>
+    
+</body>
+</html>
